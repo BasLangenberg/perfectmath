@@ -8,16 +8,19 @@ def is_perfect_number(x):
     i = 1
     result = 0
 
-    while i < x:
-        if x % i == 0:
-            dividers.append(i)
+    if x % 2 == 0:
+        while i < x:
+            if x % i == 0:
+                dividers.append(i)
 
-        i += 1
+            i += 1
 
-    for y in dividers:
-        result += y
+        for y in dividers:
+            result += y
 
-    if result == x:
-        return True
+        if result == x:
+            return True
+        else:
+            return False
     else:
         return False
